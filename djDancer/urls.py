@@ -1,5 +1,5 @@
 """
-URL configuration for djDance project.
+URL configuration for djDancer project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -24,12 +24,12 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="djDance API",
+        title="DjDancer",
         default_version='v1',
-        description="一站式告警管理平台",
-        terms_of_service="https://djdance.com",
-        contact=openapi.Contact(email="peizhenfei@cvte.com"),
-        license=openapi.License(name="BSD License"),
+        description="Django Starter Template",
+        terms_of_service="https://djdancer.com",
+        contact=openapi.Contact(email="peizhenfei@hotmail.com"),
+        license=openapi.License(name="MIT License"),
     ),
     public=True,
     permission_classes=[permissions.AllowAny],

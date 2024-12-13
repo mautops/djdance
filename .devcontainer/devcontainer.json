@@ -31,7 +31,7 @@
   "containerEnv": {
     "RUN_ENV": "DEVELOP",
     "SECRET_KEY": "QJfZ2j3Xo2NfZWjjn3w2T9PYSmhbme6S",
-    "CELERY_BROKER_URL": "amqp://guest:guest@rabbitmq:5672/djDance",
+    "CELERY_BROKER_URL": "amqp://guest:guest@rabbitmq:5672/djDancer",
     "DB_HOST": "postgres",
     "DB_PORT": "5432",
     "DB_NAME": "postgres",

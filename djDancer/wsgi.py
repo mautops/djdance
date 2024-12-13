@@ -1,5 +1,5 @@
 """
-WSGI config for djDance project.
+WSGI config for djDancer project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -10,6 +10,6 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 import os
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djDance.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djDancer.settings')
 
 application = get_wsgi_application()

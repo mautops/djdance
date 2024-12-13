@@ -1,64 +1,98 @@
-# Dev Container(推荐)
+# Django Dance Starter Template
 
-> 使用 dev container 搭建开发环境
+> Based on django-admin startproject template, but with some basic configurations.
 
-> 要求本地支持 docker
+## 0. Catalog
 
-> [REF: dev container](https://code.visualstudio.com/docs/remote/containers)
+1. [Structure](#Structure)
+2. [Development](#Development)
+3. [Screenshots](#Screenshots)
+4. [Contributing](#Contributing)
+5. [Support](#Support)
 
-## 1. 安装 vscode 插件
+## 1. Structure
 
-1. Dev Container
-   ![Dev Container](./screenshots/devcontainer.png)
+```shell
+# tree -L 1 .
+.
+├── CONTRIBUTING.md
+├── Makefile
+├── Procfile          # CNB build config
+├── README.md
+├── apps              # django apps
+├── configs           # config files
+├── djDancer           # project name, Must be Changed
+├── gunicorn.conf.py  # gunicorn config
+├── manage.py
+├── .cursorrules      # cursor editor prompt
+├── project.toml      # CNB build config
+└── requirements.txt
+```
 
-2. Remote SSH
+## 2. Seting up
 
-   ![Remote SSH](./screenshots/remote-ssh.png)
+### 1. Dev Container(Suggestted)
 
-## 2. 使用 dev container
+1. Install Docker in Local Machine
+2. Install [Dev Container Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) in VSCode
 
-![UseDev](./screenshots/use-dev.png)
+### 2. Local Development
 
-# 本地开发搭建
+#### 2.1. create virtualenv
 
-## 1. 创建虚拟环境
-
-> [REF: pyenv installation](https://github.com/pyenv/pyenv-installer)
+> [REF: pyenv installation guide](https://github.com/pyenv/pyenv-installer)
 
 ```shell
 # install python interpreter
 pyenv install 3.10.13
 
 # create virtual env
-pyenv virtualenv 3.10.13 djDance
+pyenv virtualenv 3.10.13 djDancer
 
 # activate virtual env
-pyenv local djDance
+pyenv local djDancer
 ```
 
-## 2. 安装依赖
+#### 2.2. install dependencies
 
 ```shell
 pip install -r requirements.txt
 ```
 
-## 3. 配置本地环境变量
+#### 2.3. local env
 
 > [REF: direnv installation](https://github.com/direnv/direnv)
 
 ```shell
 # create env file
 echo "export RUN_ENV=DEVELOP" > .envrc
+echo "export SECRET_KEY=xxxxx" >> .envrc
 
 # apply env
 direnv allow
 ```
 
-## 4. 运行项目
+#### 2.4. run server
 
 ```shell
 make migrations
 python manage.py migrate
-python manage.py createsuperuser --username admin --email admin@cvte.com --phone 16866666666
+python manage.py createsuperuser --username admin --email admin@admin.com --phone 18888888888
 python manage.py runserver 0.0.0.0:8000
 ```
+
+## 3. Screenshots
+
+> ### 1. Admin Page
+
+![](./screenshots/admin.png)
+
+> ### 2. Swagger API Page
+
+![](./screenshots/swagger.png)
+
+## 4. Contributing
+
+## 5. Support
+
+## 6. Sponsors

@@ -19,7 +19,7 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
-      RABBITMQ_DEFAULT_VHOST: djDance
+      RABBITMQ_DEFAULT_VHOST: djDancer
 
   postgres:
     container_name: postgres

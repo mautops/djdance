@@ -57,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-ROOT_URLCONF = 'djDance.urls'
+ROOT_URLCONF = 'djDancer.urls'
 
 AUTH_USER_MODEL = 'account.MyUser'
 

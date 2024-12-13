@@ -20,7 +20,7 @@
       "type": "debugpy",
       "request": "launch",
       "module": "celery",
-      "args": ["-A", "djDance", "beat", "-l", "DEBUG"],
+      "args": ["-A", "djDancer", "beat", "-l", "DEBUG"],
       "justMyCode": false
     },
     {
@@ -28,7 +28,7 @@
       "type": "debugpy",
       "request": "launch",
       "module": "celery",
-      "args": ["-A", "djDance", "worker", "-l", "INFO"],
+      "args": ["-A", "djDancer", "worker", "-l", "INFO"],
       "justMyCode": false
     },
     {

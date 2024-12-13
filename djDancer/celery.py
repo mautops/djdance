@@ -2,9 +2,9 @@ import os
 from celery import Celery
 
 # set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djDance.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djDancer.settings')
 
-app = Celery('djDance')
+app = Celery('djDancer')
 
 app.conf.broker_connection_retry_on_startup = True
 app.conf.broker_connection_retry = False
