@@ -28,11 +28,12 @@ pack build --builder paketobuildpacks/builder-jammy-full djDancer:latest
 
 ## 0. Catalog
 
-1. [Structure](#Structure)
-2. [Development](#Development)
-3. [Screenshots](#Screenshots)
-4. [Contributing](#Contributing)
-5. [Support](#Support)
+1. [Structure](?tab=readme-ov-file#1-structure)
+2. [Settingup](?tab=readme-ov-file#2-setting-up)
+3. [Screenshots](?tab=readme-ov-file#3-screenshots)
+4. [Contributing](?tab=readme-ov-file#4-contributing)
+5. [Support](?tab=readme-ov-file#5-support)
+6. [Sponsors](?tab=readme-ov-file#6-sponsors)
 
 ## 1. Structure
 
@@ -52,7 +53,7 @@ pack build --builder paketobuildpacks/builder-jammy-full djDancer:latest
 └── requirements.txt
 ```
 
-## 2. Seting up
+## 2. Setting up
 
 ### 1. Dev Container(Suggestted)
 
