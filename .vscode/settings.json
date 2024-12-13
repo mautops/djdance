@@ -1,0 +1,4 @@
+{
+  "python.analysis.extraPaths": ["./apps"],
+  "makefile.configureOnOpen": false
+}

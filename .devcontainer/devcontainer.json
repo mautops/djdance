@@ -1,0 +1,42 @@
+{
+  "name": "Docker in Docker",
+  "dockerComposeFile": "docker-compose.yaml",
+  "workspaceFolder": "/workspace",
+  "service": "devcontainer",
+  "postCreateCommand": "pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip && pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.fontSize": 16,
+        "editor.formatOnSave": true,
+        "terminal.integrated.persistentSessionScrollback": 10000,
+        "vim.easymotion": true,
+        "vim.enableNeovim": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "batisteo.vscode-django",
+        "ms-azuretools.vscode-docker",
+        "vscodevim.vim",
+        "esbenp.prettier-vscode",
+        "njpwerner.autodocstring",
+        "ms-vscode.makefile-tools",
+        "Alibaba-Cloud.tongyi-lingma",
+        "ms-python.autopep8"
+      ]
+    }
+  },
+  "containerEnv": {
+    "RUN_ENV": "DEVELOP",
+    "SECRET_KEY": "QJfZ2j3Xo2NfZWjjn3w2T9PYSmhbme6S",
+    "CELERY_BROKER_URL": "amqp://guest:guest@rabbitmq:5672/djDance",
+    "DB_HOST": "postgres",
+    "DB_PORT": "5432",
+    "DB_NAME": "postgres",
+    "DB_USERNAME": "postgres",
+    "DB_PASSWORD": "postgres",
+    "SENTRY_SDN": "xxx"
+  }
+}

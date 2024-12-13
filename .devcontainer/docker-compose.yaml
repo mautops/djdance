@@ -1,0 +1,32 @@
+services:
+  devcontainer:
+    container_name: devcontainer
+    image: mcr.microsoft.com/devcontainers/python:0-3.10
+    volumes:
+      - ..:/workspace
+    command: sleep infinity
+    ports:
+      - 8000:8000
+
+  rabbitmq:
+    image: rabbitmq:3.12.12-management
+    container_name: rabbitmq
+    restart: always
+    privileged: true
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      RABBITMQ_DEFAULT_VHOST: djDance
+
+  postgres:
+    container_name: postgres
+    image: mcr.microsoft.com/cbl-mariner/base/postgres:14
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres

@@ -1,0 +1,45 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Server",
+      "type": "debugpy",
+      "request": "launch",
+      "args": ["runserver", "0.0.0.0:8000"],
+      "django": true,
+      "autoStartBrowser": false,
+      "justMyCode": false,
+      "program": "${workspaceFolder}/manage.py",
+      "envFile": "${workspaceFolder}/.envrc"
+    },
+    {
+      "name": "Celery Beta",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "celery",
+      "args": ["-A", "djDance", "beat", "-l", "DEBUG"],
+      "justMyCode": false
+    },
+    {
+      "name": "Celery Worker",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "celery",
+      "args": ["-A", "djDance", "worker", "-l", "INFO"],
+      "justMyCode": false
+    },
+    {
+      "name": "Shell",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/manage.py",
+      "args": ["shell"],
+      "django": true,
+      "justMyCode": false,
+      "envFile": "${workspaceFolder}/.envrc"
+    }
+  ]
+}
