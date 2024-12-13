@@ -2,6 +2,28 @@
 
 > Based on django-admin startproject template, but with some basic configurations.
 
+## How To Start?
+
+1. Clone this repo
+2. Rename `djDancer` to your project name
+3. Search '!!!' in the code and replace with yours
+4. modify `.envrc.example` to your `.envrc`
+5. Run `direnv allow`
+
+## How To Build?
+
+> [Cloud Native Build Packs Installation](https://buildpacks.io/docs/for-platform-operators/how-to/integrate-ci/pack/)
+
+```shell
+# Mac OSX Examle
+
+# install pack cli
+brew install buildpacks/tap/pack
+
+# build image
+pack build --builder paketobuildpacks/builder-jammy-full djDancer:latest
+```
+
 ## 0. Catalog
 
 1. [Structure](#Structure)
