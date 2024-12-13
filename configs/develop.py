@@ -10,6 +10,8 @@ DEBUG = True
 CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL')
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
+
+# !!! Comments out DATABASES if DO NOT Use Devcontainer
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
