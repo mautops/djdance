@@ -1,3 +1,0 @@
-[[build.env]]
-name="PIP_INDEX_URL"
-value="http://mirrors.aliyun.com/pypi/simple/"

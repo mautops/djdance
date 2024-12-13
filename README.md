@@ -14,6 +14,8 @@
 
 > [Cloud Native Build Packs Installation](https://buildpacks.io/docs/for-platform-operators/how-to/integrate-ci/pack/)
 
+> Suggested [Paketo Builder](https://paketo.io/)
+
 ```shell
 # Mac OSX Examle
 
@@ -47,7 +49,6 @@ pack build --builder paketobuildpacks/builder-jammy-full djDancer:latest
 ├── gunicorn.conf.py  # gunicorn config
 ├── manage.py
 ├── .cursorrules      # cursor editor prompt
-├── project.toml      # CNB build config
 └── requirements.txt
 ```
 
